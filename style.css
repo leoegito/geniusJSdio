@@ -1,9 +1,27 @@
 body {
     margin: 0;
-    background-color: aqua;
+    font-family: 'Palatino Linotype';
+    /*background-color: aqua;*/
+    background: #0F2027;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
+header {
+    color: rgb(244, 253, 253);
+    text-shadow: 1px 1px azure;
+    text-align: center;
+    padding-bottom: 0px;
+}
+
+
 .main-game {
+    top: -1em;
+    position: absolute;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -16,38 +34,77 @@ body {
     grid-template-areas: 'green red'
         'yellow blue';
     grid-gap: 10px;
-    border: 1px solid #ffffff;
-    background-color: #ffffff;
+    /*border: 1px;*/
+    /*background-color: #ffffff;*/
     border-radius: 100%;
-    width: 700px;
-    height: 700px;
+    width: 600px;
+    height: 600px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
 }
 
 .blue {
     grid-area: blue;
-    background-color: blue;
+    background-color: rgba(58, 99, 146, 0.89);
     border-bottom-right-radius: 100%;
 }
 
 .red {
     grid-area: red;
-    background-color: red;
+    background-color: rgba(201, 70, 70, 0.918);
     border-top-right-radius: 100%;
 }
 
 .yellow {
     grid-area: yellow;
-    background-color: yellow;
+    background-color: rgba(251, 253, 94, 0.89);
     border-bottom-left-radius: 100%;
 }
 
 .green {
     grid-area: green;
-    background-color: green;
+    background-color: rgba(58, 158, 58, 0.753);
     border-top-left-radius: 100%;
 }
 
 .selected {
-    opacity: 0.6;
+    opacity: 0.7;
+}
+
+/*
+Media Queries
+*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .genius {
+        width: 350px !important;
+        height: 350px !important;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .genius {
+        width: 375px;
+        height: 375px;
+    }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .genius {
+        width: 460px;
+        height: 460px;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .genius {
+        width: 550px;
+        height: 550px;
+    }
+
 }

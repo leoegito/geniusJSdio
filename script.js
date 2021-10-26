@@ -41,7 +41,9 @@ let checkOrder = () => {
         }
     }
     if(clickedOrder.length == order.length){
-        alert(`Pontuação: ${score}\nVocê acertou! Iniciando próximo nível.`);
+        alert(`Você acertou! Iniciando próximo nível.`);
+        //Display score in html
+        document.getElementById('score').innerHTML = `${score}`;
         nextLevel();
     }
 }
@@ -94,6 +96,7 @@ let lose = () => {
 let playGame = () => {
     alert('Iniciando novo jogo...');
     score = 0;
+    document.getElementById('score').innerHTML = `${score}`;
 
     nextLevel();
 }
