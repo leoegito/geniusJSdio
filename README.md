@@ -1,4 +1,4 @@
-# GeniusLike - JavaScript
+# Genius Game - JavaScript
 <p>Jogo da memória de cores, estilo Genius, no navegador.</p>
 
 <p>Projeto inicial realizado no bootcamp de JavaScript da Eduzz.</br>
